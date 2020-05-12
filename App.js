@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {Text, View } from 'react-native';
+
+// React nav
+import Root from './navigators/root';
 
 export default function App() {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <Root />
   );
 }
 
