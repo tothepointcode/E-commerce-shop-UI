@@ -1,0 +1,17 @@
+{
+  "name": "E-Commerce Shop",
+  "displayName": "eCommerceShopUi",
+  "expo": {
+    "name": "eCommerceShopUi",
+    "slug": "eCommerceShopUi",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
