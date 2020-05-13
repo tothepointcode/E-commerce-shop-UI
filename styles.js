@@ -6,6 +6,7 @@ export const colors = {
   alt: "#1A202C",
   placeholder: "#CBD5E0",
   black: "#0f0f0f",
+  orange: "#ff8651"
 };
 
 export const basic = StyleSheet.create({
@@ -43,8 +44,14 @@ export const basic = StyleSheet.create({
   },
   activeCategory: {
     color: colors.alt,
-    borderBottomWidth: 3,
     paddingBottom: 5,
-    borderBottomWidth: 3,
+  },
+  activeBorder: {
+    backgroundColor: colors.orange,
+    height: 3,
+    width: 28,
+    marginRight: "auto",
+    marginLeft: 'auto',
+    borderRadius: 20,
   },
 });

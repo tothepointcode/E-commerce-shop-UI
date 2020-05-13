@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 // UI
 import { View, Text, TextInput, ScrollView } from "react-native";
@@ -10,7 +10,7 @@ import Categories from "./Categories";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Home = () => {
-    const [active, setActive] = useState(1);
+  const [active, setActive] = useState(1);
   const categories = [
     {
       name: "Interiors",
@@ -41,8 +41,20 @@ const Home = () => {
       <ScrollView horizontal={true} style={basic.inputSection}>
         {categories.map((category, index) => {
           return (
-            <TouchableOpacity style={basic.category} onPress={()=> setActive(index)}>
-              <Text style={[basic.categoryText, (active === index) && basic.activeCategory]}>{category.name}</Text>
+            <TouchableOpacity
+              key={index}
+              style={basic.category}
+              onPress={() => setActive(index)}
+            >
+              <Text
+                style={[
+                  basic.categoryText,
+                  active === index && basic.activeCategory,
+                ]}
+              >
+                {category.name}
+              </Text>
+              {active === index && <View style={basic.activeBorder} />}
             </TouchableOpacity>
           );
         })}
