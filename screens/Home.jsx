@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 
 // UI
-import { View, Text, TextInput, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  ScrollView,
+  TouchableOpacity,
+  Image,
+} from "react-native";
 import { Feather } from "@expo/vector-icons";
 
 // Custom styles
 import { basic, colors } from "../styles";
-import Categories from "./Categories";
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Home = () => {
   const [active, setActive] = useState(1);
@@ -28,6 +33,113 @@ const Home = () => {
       name: "Home",
     },
   ];
+  const shopData = [
+    {
+      name: "Interiors",
+      items: [],
+    },
+    {
+      name: "Furniture",
+      items: [
+        {
+          name: "Sample furniture",
+          by: "Sample designer",
+          rating: 4.2,
+          price: "$1234",
+          color: "Sample color",
+          style: "Modern",
+          made: "Somewhere",
+          img: require("./../assets/img1.jpg"),
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
+        },
+        {
+          name: "Tune Sofa",
+          by: "Carl MH Barenbrug",
+          rating: 4.5,
+          price: "$1234",
+          color: "Silver",
+          style: "Modern",
+          made: "Russia",
+          img: require("./../assets/tune.jpg"),
+          description:
+            "Sound absorption is a key concept in room acoustics, which may not often be considered in furniture design.",
+        },
+        {
+          name: "Sample furniture",
+          by: "Sample designer",
+          rating: 4.2,
+          price: "$1234",
+          color: "Sample color",
+          style: "Modern",
+          made: "Somewhere",
+          img: require("./../assets/img2.jpg"),
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
+        },
+        {
+          name: "Sample furniture",
+          by: "Sample designer",
+          rating: 4.2,
+          price: "$1234",
+          color: "Sample color",
+          style: "Modern",
+          made: "Somewhere",
+          img: require("./../assets/img3.jpg"),
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
+        },
+        {
+          name: "Sample furniture",
+          by: "Sample designer",
+          rating: 4.2,
+          price: "$1234",
+          color: "Sample color",
+          style: "Modern",
+          made: "Somewhere",
+          img: require("./../assets/img4.jpg"),
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
+        },
+        {
+          name: "Sample furniture",
+          by: "Sample designer",
+          rating: 4.2,
+          price: "$1234",
+          color: "Sample color",
+          style: "Modern",
+          made: "Somewhere",
+          img: require("./../assets/img5.jpg"),
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
+        },
+        {
+          name: "Sample furniture",
+          by: "Sample designer",
+          rating: 4.2,
+          price: "$1234",
+          color: "Sample color",
+          style: "Modern",
+          made: "Somewhere",
+          img: require("./../assets/img6.jpg"),
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
+        },
+      ],
+    },
+    {
+      name: "Moods",
+      items: [],
+    },
+    {
+      name: "Creators",
+      items: [],
+    },
+    {
+      name: "Home",
+      items: [],
+    },
+  ];
   return (
     <View style={basic.body}>
       <View style={basic.inputSection}>
@@ -38,26 +150,41 @@ const Home = () => {
         />
         <Feather name="search" style={basic.icon} />
       </View>
-      <ScrollView horizontal={true} style={basic.inputSection}>
-        {categories.map((category, index) => {
-          return (
-            <TouchableOpacity
-              key={index}
-              style={basic.category}
-              onPress={() => setActive(index)}
-            >
-              <Text
-                style={[
-                  basic.categoryText,
-                  active === index && basic.activeCategory,
-                ]}
+      <View style={basic.categoryView}>
+        <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
+          {categories.map((category, index) => {
+            return (
+              <TouchableOpacity
+                key={index}
+                style={basic.category}
+                onPress={() => setActive(index)}
               >
-                {category.name}
-              </Text>
-              {active === index && <View style={basic.activeBorder} />}
-            </TouchableOpacity>
-          );
-        })}
+                <Text
+                  style={[
+                    basic.categoryText,
+                    active === index && basic.activeCategory,
+                  ]}
+                >
+                  {category.name}
+                </Text>
+                {active === index && <View style={basic.activeBorder} />}
+              </TouchableOpacity>
+            );
+          })}
+        </ScrollView>
+      </View>
+      <ScrollView>
+        <View style={basic.itemsView}>
+          {shopData[active].items.map((item, index) => {
+            return (
+              <View key={index} style={basic.item}>
+                <Image style={basic.itemImage} source={item.img} />
+                <Text style={basic.itemTitle}>{item.name}</Text>
+                <Text style={basic.itemSub}>by {item.by}</Text>
+              </View>
+            );
+          })}
+        </View>
       </ScrollView>
     </View>
   );

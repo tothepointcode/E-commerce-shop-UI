@@ -1,4 +1,8 @@
 import { StyleSheet } from "react-native";
+import { Dimensions } from 'react-native';
+
+const screenWidth = Math.round(Dimensions.get('window').width);
+const screenHeight = Math.round(Dimensions.get('window').height);
 
 export const colors = {
   primary: "#fff",
@@ -6,7 +10,7 @@ export const colors = {
   alt: "#1A202C",
   placeholder: "#CBD5E0",
   black: "#0f0f0f",
-  orange: "#ff8651"
+  orange: "#ff8651",
 };
 
 export const basic = StyleSheet.create({
@@ -51,7 +55,37 @@ export const basic = StyleSheet.create({
     height: 3,
     width: 28,
     marginRight: "auto",
-    marginLeft: 'auto',
+    marginLeft: "auto",
     borderRadius: 20,
+  },
+  categoryView: {
+    marginBottom: 20,
+  },
+  itemsView: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    flex: 1,
+    justifyContent: "space-between"
+  },
+  item: {
+    width: (screenWidth-75)/2,
+    height: 250,
+    marginBottom: 20
+  },
+  itemImage: {
+    width: (screenWidth-75)/2,
+    height: 200,
+    resizeMode: "cover",
+    borderRadius: 20
+  },
+  itemTitle: {
+    fontWeight: 'bold',
+    fontSize: 17,
+    paddingTop: 5
+  },
+  itemSub: {
+    fontSize: 12,
+    // opacity: 0.3,
+    color: colors.placeholder
   },
 });
