@@ -68,12 +68,11 @@ export const basic = StyleSheet.create({
     justifyContent: "space-between"
   },
   item: {
-    width: (screenWidth-75)/2,
+    width: (screenWidth-85)/2,
     height: 250,
-    marginBottom: 20
   },
   itemImage: {
-    width: (screenWidth-75)/2,
+    width: (screenWidth-85)/2,
     height: 200,
     resizeMode: "cover",
     borderRadius: 20
@@ -85,7 +84,9 @@ export const basic = StyleSheet.create({
   },
   itemSub: {
     fontSize: 12,
-    // opacity: 0.3,
     color: colors.placeholder
   },
+  drop: {
+    marginTop: 20
+  }
 });

@@ -9,6 +9,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 // Screen
 import Home from "../screens/Home";
+import Details from "../screens/Details";
+
 
 import { colors } from "../styles";
 
@@ -36,6 +38,13 @@ const Root = () => {
           }}
           name="Home"
           component={Home}
+        />
+        <Stack.Screen
+          options={{
+            title: "",
+          }}
+          name="Details"
+          component={Details}
         />
       </Stack.Navigator>
     </NavigationContainer>

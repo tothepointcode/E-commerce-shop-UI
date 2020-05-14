@@ -14,8 +14,11 @@ import { Feather } from "@expo/vector-icons";
 // Custom styles
 import { basic, colors } from "../styles";
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [active, setActive] = useState(1);
+  const showDetails = () => {
+    navigation.navigate("Details", {})
+  }
   const categories = [
     {
       name: "Interiors",
@@ -177,11 +180,15 @@ const Home = () => {
         <View style={basic.itemsView}>
           {shopData[active].items.map((item, index) => {
             return (
-              <View key={index} style={basic.item}>
+              <TouchableOpacity
+                onPress={showDetails}
+                key={index}
+                style={[basic.item, index % 2 === 1 && basic.drop]}
+              >
                 <Image style={basic.itemImage} source={item.img} />
                 <Text style={basic.itemTitle}>{item.name}</Text>
                 <Text style={basic.itemSub}>by {item.by}</Text>
-              </View>
+              </TouchableOpacity>
             );
           })}
         </View>
