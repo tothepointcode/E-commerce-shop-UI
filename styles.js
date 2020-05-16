@@ -89,6 +89,11 @@ export const basic = StyleSheet.create({
   drop: {
     marginTop: 20,
   },
+  info: {
+    color: colors.placeholder,
+    fontSize: 15,
+    textAlign: "center",
+  },
 });
 
 export const details = StyleSheet.create({
@@ -196,6 +201,6 @@ export const details = StyleSheet.create({
     fontSize: 28,
   },
   heartActive: {
-    color: colors.orange
-  }
+    color: colors.orange,
+  },
 });

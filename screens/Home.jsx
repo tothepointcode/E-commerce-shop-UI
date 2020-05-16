@@ -17,7 +17,7 @@ import { basic, colors } from "../styles";
 const Home = ({ navigation }) => {
   const [active, setActive] = useState(1);
   const showDetails = (item) => {
-    navigation.navigate("Details", {...item});
+    navigation.navigate("Details", { ...item });
   };
   const shopData = [
     {
@@ -161,19 +161,24 @@ const Home = ({ navigation }) => {
       </View>
       <ScrollView>
         <View style={basic.itemsView}>
-          {shopData[active].items.map((item, index) => {
-            return (
-              <TouchableOpacity
-                onPress={() => showDetails(item)}
-                key={index}
-                style={[basic.item, index % 2 === 1 && basic.drop]}
-              >
-                <Image style={basic.itemImage} source={item.img} />
-                <Text style={basic.itemTitle}>{item.name}</Text>
-                <Text style={basic.itemSub}>by {item.by}</Text>
-              </TouchableOpacity>
-            );
-          })}
+          {shopData[active].items.length !== 0 &&
+            shopData[active].items.map((item, index) => {
+              return (
+                <TouchableOpacity
+                  onPress={() => showDetails(item)}
+                  key={index}
+                  style={[basic.item, index % 2 === 1 && basic.drop]}
+                >
+                  <Image style={basic.itemImage} source={item.img} />
+                  <Text style={basic.itemTitle}>{item.name}</Text>
+                  <Text style={basic.itemSub}>by {item.by}</Text>
+                </TouchableOpacity>
+              );
+            })}
+
+          {!shopData[active].items.length && (
+            <Text style={basic.info}>No items under this category yet.</Text>
+          )}
         </View>
       </ScrollView>
     </View>
