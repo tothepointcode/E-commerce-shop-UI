@@ -30,8 +30,8 @@ const Home = ({ navigation }) => {
         {
           name: "Sample furniture",
           by: "Sample designer",
-          rating: 4.2,
-          price: "$1234",
+          rating: 3.2,
+          price: "$1224",
           color: "Sample color",
           style: "Modern",
           made: "Somewhere",
@@ -43,7 +43,7 @@ const Home = ({ navigation }) => {
           name: "Tune Sofa",
           by: "Carl MH Barenbrug",
           rating: 4.5,
-          price: "$1234",
+          price: "$1695",
           color: "Silver",
           style: "Modern",
           made: "Russia",
@@ -66,7 +66,7 @@ const Home = ({ navigation }) => {
         {
           name: "Sample furniture",
           by: "Sample designer",
-          rating: 4.2,
+          rating: 4.0,
           price: "$1234",
           color: "Sample color",
           style: "Modern",

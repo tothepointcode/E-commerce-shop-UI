@@ -122,4 +122,43 @@ export const details = StyleSheet.create({
     top: -100,
     right: 0,
   },
+  pad: {
+    padding: 15
+  },
+  headView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: "space-between"
+  },
+  head: {
+    fontSize: 35,
+    fontWeight: 'bold',
+    color: colors.al
+  },
+  sub: {
+    fontSize: 17
+  },
+  price: {
+    fontSize: 19,
+    color: colors.orange,
+    fontWeight: 'bold'
+  },
+  rating: {
+    paddingVertical: 10,
+    fontSize: 13,
+    paddingRight: 5
+  },
+  ratingView: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  star: {
+    margin: 2,
+    color: colors.orange
+  },
+  properties: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 20
+  }
 });
