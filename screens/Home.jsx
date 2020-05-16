@@ -28,7 +28,7 @@ const Home = ({ navigation }) => {
       name: "Furniture",
       items: [
         {
-          name: "Sample furniture",
+          name: "Sample Unit",
           by: "Sample designer",
           rating: 3.2,
           price: "$1224",
@@ -52,7 +52,7 @@ const Home = ({ navigation }) => {
             "Sound absorption is a key concept in room acoustics, which may not often be considered in furniture design.",
         },
         {
-          name: "Sample furniture",
+          name: "Sample Unit",
           by: "Sample designer",
           rating: 4.2,
           price: "$1234",
@@ -64,7 +64,7 @@ const Home = ({ navigation }) => {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
         },
         {
-          name: "Sample furniture",
+          name: "Sample Unit",
           by: "Sample designer",
           rating: 4.0,
           price: "$1234",
@@ -76,7 +76,7 @@ const Home = ({ navigation }) => {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
         },
         {
-          name: "Sample furniture",
+          name: "Sample Unit",
           by: "Sample designer",
           rating: 4.2,
           price: "$1234",
@@ -88,7 +88,7 @@ const Home = ({ navigation }) => {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
         },
         {
-          name: "Sample furniture",
+          name: "Sample Unit",
           by: "Sample designer",
           rating: 4.2,
           price: "$1234",
@@ -100,7 +100,7 @@ const Home = ({ navigation }) => {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt natus nam nemo at harum asperiores possimus laborum non.",
         },
         {
-          name: "Sample furniture",
+          name: "Sample Unit",
           by: "Sample designer",
           rating: 4.2,
           price: "$1234",
@@ -127,7 +127,7 @@ const Home = ({ navigation }) => {
     },
   ];
   return (
-    <View style={basic.body}>
+    <View style={[basic.body, { paddingBottom: 0 }]}>
       <View style={basic.inputSection}>
         <TextInput
           placeholder="Search..."

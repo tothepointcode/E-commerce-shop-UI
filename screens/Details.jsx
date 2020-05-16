@@ -63,15 +63,15 @@ const Details = ({ route }) => {
           </View>
           <View style={details.ratingView}>
             <Text style={details.rating}>{rating}</Text>
-            {prepareStars().map((star) => {
-              return star;
+            {prepareStars().map((star, index) => {
+              return <Text key={index}>{star}</Text>;
             })}
           </View>
           <View style={details.properties}>
-            {properties.map((property) => {
+            {properties.map((property, index) => {
               const { label, value } = property;
               return (
-                <View style={details.propertyItem}>
+                <View key={index} style={details.propertyItem}>
                   <Text style={[basic.itemSub, details.sub, { fontSize: 16 }]}>
                     {label}
                   </Text>

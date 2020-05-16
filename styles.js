@@ -48,6 +48,7 @@ export const basic = StyleSheet.create({
   },
   activeCategory: {
     color: colors.alt,
+    fontWeight: 'bold',
     paddingBottom: 5,
   },
   activeBorder: {
@@ -203,4 +204,8 @@ export const details = StyleSheet.create({
   heartActive: {
     color: colors.orange,
   },
+  value: {
+    fontWeight: 'bold',
+    fontSize: 15
+  }
 });
