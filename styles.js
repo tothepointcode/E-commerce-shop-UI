@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
-import { Dimensions } from 'react-native';
+import { Dimensions } from "react-native";
 
-const screenWidth = Math.round(Dimensions.get('window').width);
-const screenHeight = Math.round(Dimensions.get('window').height);
+const screenWidth = Math.round(Dimensions.get("window").width);
+const screenHeight = Math.round(Dimensions.get("window").height);
 
 export const colors = {
   primary: "#fff",
@@ -62,31 +62,64 @@ export const basic = StyleSheet.create({
     marginBottom: 20,
   },
   itemsView: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexDirection: "row",
+    flexWrap: "wrap",
     flex: 1,
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   item: {
-    width: (screenWidth-85)/2,
+    width: (screenWidth - 85) / 2,
     height: 250,
   },
   itemImage: {
-    width: (screenWidth-85)/2,
+    width: (screenWidth - 85) / 2,
     height: 200,
     resizeMode: "cover",
-    borderRadius: 20
+    borderRadius: 20,
   },
   itemTitle: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: 17,
-    paddingTop: 5
+    paddingTop: 5,
   },
   itemSub: {
     fontSize: 12,
-    color: colors.placeholder
+    color: colors.placeholder,
   },
   drop: {
-    marginTop: 20
-  }
+    marginTop: 20,
+  },
+});
+
+export const details = StyleSheet.create({
+  body: {
+    backgroundColor: colors.primary,
+    flex: 1,
+  },
+  image: {
+    width: screenWidth,
+    height: screenHeight / 1.6,
+    resizeMode: "cover",
+  },
+  detailsView: {
+    padding: 30,
+    backgroundColor: colors.primary,
+    flex: 1,
+    height: screenHeight / 1.9,
+    width: screenWidth,
+    resizeMode: "contain",
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    left: 0,
+    borderTopLeftRadius: 95,
+  },
+  overlayCurve: {
+    height: 100,
+    width: 100,
+    position: "absolute",
+    resizeMode: "cover",
+    top: -100,
+    right: 0,
+  },
 });

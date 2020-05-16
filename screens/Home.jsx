@@ -14,28 +14,11 @@ import { Feather } from "@expo/vector-icons";
 // Custom styles
 import { basic, colors } from "../styles";
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
   const [active, setActive] = useState(1);
-  const showDetails = () => {
-    navigation.navigate("Details", {})
-  }
-  const categories = [
-    {
-      name: "Interiors",
-    },
-    {
-      name: "Furniture",
-    },
-    {
-      name: "Moods",
-    },
-    {
-      name: "Creators",
-    },
-    {
-      name: "Home",
-    },
-  ];
+  const showDetails = (item) => {
+    navigation.navigate("Details", {...item});
+  };
   const shopData = [
     {
       name: "Interiors",
@@ -155,7 +138,7 @@ const Home = ({navigation}) => {
       </View>
       <View style={basic.categoryView}>
         <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
-          {categories.map((category, index) => {
+          {shopData.map((category, index) => {
             return (
               <TouchableOpacity
                 key={index}
@@ -181,7 +164,7 @@ const Home = ({navigation}) => {
           {shopData[active].items.map((item, index) => {
             return (
               <TouchableOpacity
-                onPress={showDetails}
+                onPress={() => showDetails(item)}
                 key={index}
                 style={[basic.item, index % 2 === 1 && basic.drop]}
               >

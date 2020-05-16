@@ -42,6 +42,10 @@ const Root = () => {
         <Stack.Screen
           options={{
             title: "",
+            headerStyle: {
+                backgroundColor: 'red'
+            },
+            headerTransparent: true
           }}
           name="Details"
           component={Details}
