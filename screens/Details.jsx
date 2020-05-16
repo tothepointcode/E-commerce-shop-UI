@@ -7,6 +7,7 @@ import { details, basic } from "../styles";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Details = ({ route }) => {
+  const [fav, setFav] = React.useState(false);
   const {
     img,
     name,
@@ -84,8 +85,15 @@ const Details = ({ route }) => {
             <TouchableOpacity style={details.pay}>
               <Text style={details.payText}>Pay</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={details.heart}>
-              <Ionicons style={details.heartIcon} name="ios-heart-empty" size={24} color="black" />
+            <TouchableOpacity
+              onPress={() => setFav(!fav)}
+              style={details.heart}
+            >
+              <Ionicons
+                style={[details.heartIcon, fav && details.heartActive]}
+                name={fav ? "md-heart" : "ios-heart-empty"}
+                size={24}
+              />
             </TouchableOpacity>
           </View>
         </View>

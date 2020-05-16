@@ -195,4 +195,7 @@ export const details = StyleSheet.create({
     textAlign: "center",
     fontSize: 28,
   },
+  heartActive: {
+    color: colors.orange
+  }
 });

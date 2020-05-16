@@ -1,7 +1,7 @@
 import * as React from "react";
 
 // UI
-import { View, Text } from "react-native";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 // React Navigation
 import { NavigationContainer } from "@react-navigation/native";
@@ -10,7 +10,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 // Screen
 import Home from "../screens/Home";
 import Details from "../screens/Details";
-
 
 import { colors } from "../styles";
 
@@ -30,6 +29,19 @@ const Root = () => {
             fontSize: 17,
             color: colors.alt,
           },
+          headerBackImage: ({ tintColor }) => (
+            <Ionicons name="ios-arrow-back" size={27} color={tintColor} />
+          ),
+          headerRight: ({ tintColor }) => (
+            <MaterialIcons name="apps" size={23} color={tintColor} />
+          ),
+
+          headerLeftContainerStyle: {
+            paddingLeft: 30,
+          },
+          headerRightContainerStyle: {
+            paddingRight: 30,
+          },
         }}
       >
         <Stack.Screen
@@ -43,9 +55,10 @@ const Root = () => {
           options={{
             title: "",
             headerStyle: {
-                backgroundColor: 'red'
+              backgroundColor: "red",
             },
-            headerTransparent: true
+            headerTransparent: true,
+            headerTintColor: colors.primary,
           }}
           name="Details"
           component={Details}
