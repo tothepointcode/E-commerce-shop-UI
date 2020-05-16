@@ -123,42 +123,76 @@ export const details = StyleSheet.create({
     right: 0,
   },
   pad: {
-    padding: 15
+    padding: 15,
   },
   headView: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: "space-between"
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   head: {
     fontSize: 35,
-    fontWeight: 'bold',
-    color: colors.al
+    fontWeight: "bold",
+    color: colors.al,
   },
   sub: {
-    fontSize: 17
+    fontSize: 17,
   },
   price: {
     fontSize: 19,
     color: colors.orange,
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
   rating: {
     paddingVertical: 10,
     fontSize: 13,
-    paddingRight: 5
+    paddingRight: 5,
   },
   ratingView: {
-    flexDirection: 'row',
-    alignItems: 'center'
+    flexDirection: "row",
+    alignItems: "center",
   },
   star: {
     margin: 2,
-    color: colors.orange
+    color: colors.orange,
   },
   properties: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingVertical: 20
-  }
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: 20,
+  },
+  description: {
+    fontSize: 13,
+    paddingVertical: 10,
+  },
+  buttonView: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 25,
+  },
+  pay: {
+    backgroundColor: colors.alt,
+    width: (screenWidth - 90) * 0.68,
+    padding: 25,
+    borderRadius: 25,
+    height: 75,
+  },
+  payText: {
+    color: colors.primary,
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 15,
+  },
+  heart: {
+    backgroundColor: colors.secondary,
+    width: (screenWidth - 90) * 0.28,
+    padding: 25,
+    borderRadius: 25,
+    height: 75,
+  },
+  heartIcon: {
+    color: colors.placeholder,
+    textAlign: "center",
+    fontSize: 28,
+  },
 });

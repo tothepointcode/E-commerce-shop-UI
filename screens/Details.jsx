@@ -2,8 +2,9 @@ import * as React from "react";
 
 // UI
 import { View, Text, Image } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { details, basic } from "../styles";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Details = ({ route }) => {
   const {
@@ -67,7 +68,7 @@ const Details = ({ route }) => {
           </View>
           <View style={details.properties}>
             {properties.map((property) => {
-              const {label, value} = property;
+              const { label, value } = property;
               return (
                 <View style={details.propertyItem}>
                   <Text style={[basic.itemSub, details.sub, { fontSize: 16 }]}>
@@ -77,6 +78,15 @@ const Details = ({ route }) => {
                 </View>
               );
             })}
+          </View>
+          <Text style={details.description}>{description}</Text>
+          <View style={details.buttonView}>
+            <TouchableOpacity style={details.pay}>
+              <Text style={details.payText}>Pay</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={details.heart}>
+              <Ionicons style={details.heartIcon} name="ios-heart-empty" size={24} color="black" />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
