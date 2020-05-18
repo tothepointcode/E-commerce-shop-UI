@@ -14,3 +14,7 @@ A clone of an e-commerce shop UI based  on a dribble interface. The interface cr
 ## Screenshots of Created Screens
 
 ![Created Screens](/assets/e-commerce-ss.jpg)
+
+## Acknowledgements
+
+- [Unsplash](https://unsplash.com/s/photos/furniture) - Source for sample furniture images.
