@@ -7,13 +7,13 @@ A clone of an e-commerce shop UI based  on a dribble interface. The interface cr
 - [Expo](https://expo.io/tools)
 - [React Native](https://reactnative.dev/)
 
+## Screenshots
+
+![Created Screens](/assets/e-commerce-ss.jpg)
+
 ## Dribble Reference
 
 ![Reference on dribble](/assets/e-commerce.jpg)
-
-## Screenshots of Created Screens
-
-![Created Screens](/assets/e-commerce-ss.jpg)
 
 ## Acknowledgements
 
